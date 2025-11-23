@@ -4,6 +4,24 @@ craftingTable.remove(<item:minecraft:beacon>);
 craftingTable.remove(<item:minecraft:ender_chest>);
 craftingTable.removeByName("minecraft:repeater");
 craftingTable.removeByName("minecraft:slime_block");
+<recipetype:create:crushing>.removeByName("create:crushing/gravel");
+<recipetype:create:splashing>.removeByName("create:splashing/sand");
+craftingTable.removeByName("create:crafting/kinetics/fluid_pipe_vertical");
+<recipetype:create:mixing>.removeByName("create:mixing/chocolate");
+<recipetype:create:mixing>.removeByName("create:mixing/chocolate_melting");
+<recipetype:create:mixing>.removeByName("create:mixing/tea");
+<recipetype:create:mixing>.removeByName("create:mixing/honey");
+<recipetype:create:filling>.removeByName("create:filling/blaze_cake");
+<recipetype:create:compacting>.removeByName("create:compacting/blaze_cake");
+<recipetype:create:filling>.removeByName("create:filling/redstone");
+<recipetype:create:filling>.removeByName("create:filling/glowstone");
+<recipetype:create:filling>.removeByName("create:filling/gunpowder");
+<recipetype:create:crushing>.removeByName("create:crushing/netherrack");
+craftingTable.remove(<item:minecraft:paper>);
+<recipetype:create:pressing>.remove(<item:minecraft:paper>);
+craftingTable.remove(<item:minecraft:mossy_cobblestone>);
+craftingTable.remove(<item:create:andesite_alloy>);
+<recipetype:create:mixing>.remove(<item:create:andesite_alloy>);
 
 //removed vanilla foods
 craftingTable.removeByName("minecraft:bread");

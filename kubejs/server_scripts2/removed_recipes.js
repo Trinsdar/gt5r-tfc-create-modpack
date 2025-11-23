@@ -1,32 +1,11 @@
 
 onEvent('recipes', event => 
 {
-	event.remove({id: 'create:crushing/gravel'})
 	event.remove({id: 'create:milling/dripstone_block'})
-	event.remove({id: 'create:splashing/sand'})
-	event.remove({id: 'create:filling/blaze_cake'})
-	event.remove({id: 'create:crafting/materials/andesite_alloy'})
-	event.remove({id: 'create:crafting/materials/andesite_alloy_from_zinc'})
-	event.remove({id: 'create:crafting/kinetics/fluid_pipe_vertical'})
-	event.remove({id: 'create:item_application/copper_casing_from_wood'})
-	event.remove({id: 'create:mixing/chocolate'})
-	event.remove({id: 'create:mixing/chocolate_melting'})
-	event.remove({id: 'create:mixing/tea'})
-	event.remove({id: 'create:mixing/honey'})
 	event.remove({id: 'create:compacting/andesite_from_flint'})
 	event.remove({id: 'create:compacting/diorite_from_flint'})
 	event.remove({id: 'create:compacting/granite_from_flint'})
   event.remove({id: 'create:crafting/kinetics/shaft'})
-
-	event.remove({input: 'minecraft:sugar_cane'})
-	event.remove({input: 'minecraft:quartz'})
-	event.remove({input: 'minecraft:honeycomb'})
-	event.remove({input: 'minecraft:honeycomb_block'})
-	event.remove({input: 'create:cinder_flour'})
-
-	event.remove({output: 'minecraft:mossy_cobblestone'})
-
-
 
 	//removed to prevent access
 	event.remove({id: 'minecraft:coal_block'})
@@ -47,7 +26,6 @@ onEvent('recipes', event =>
 	event.remove({id: 'create:milling/terracotta'})
 	event.remove({id: 'create:milling/wool'})
 	event.remove({id: 'create:crushing/wool'})
-	event.remove({id: 'tfc:scraping/paper'})
 
 	event.remove({output: 'create:experience_nugget'})
 })
