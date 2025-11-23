@@ -11,6 +11,10 @@ craftingTable.removeByName("create:crafting/kinetics/fluid_pipe_vertical");
 <recipetype:create:mixing>.removeByName("create:mixing/chocolate_melting");
 <recipetype:create:mixing>.removeByName("create:mixing/tea");
 <recipetype:create:mixing>.removeByName("create:mixing/honey");
+<recipetype:create:compacting>.removeByName("create:compacting/andesite_from_flint");
+<recipetype:create:compacting>.removeByName("create:compacting/diorite_from_flint");
+<recipetype:create:compacting>.removeByName("create:compacting/granite_from_flint");
+craftingTable.removeByName("create:crafting/kinetics/shaft");
 <recipetype:create:filling>.removeByName("create:filling/blaze_cake");
 <recipetype:create:compacting>.removeByName("create:compacting/blaze_cake");
 <recipetype:create:filling>.removeByName("create:filling/redstone");
@@ -22,6 +26,16 @@ craftingTable.remove(<item:minecraft:paper>);
 craftingTable.remove(<item:minecraft:mossy_cobblestone>);
 craftingTable.remove(<item:create:andesite_alloy>);
 <recipetype:create:mixing>.remove(<item:create:andesite_alloy>);
+
+
+craftingTable.removeByName("create:crafting/materials/zinc_block_from_compacting");
+craftingTable.removeByName("create:crafting/materials/zinc_ingot_from_compacting");
+craftingTable.removeByName("create:crafting/materials/brass_block_from_compacting");
+craftingTable.removeByName("create:crafting/materials/brass_ingot_from_compacting");
+craftingTable.removeByName("create:crafting/materials/copper_ingot");
+craftingTable.removeByName("create:crafting/kinetics/empty_blaze_burner");
+craftingTable.removeByName("create:crafting/kinetics/propeller");
+craftingTable.removeByName("create:crafting/kinetics/brass_hand");
 
 //removed vanilla foods
 craftingTable.removeByName("minecraft:bread");
