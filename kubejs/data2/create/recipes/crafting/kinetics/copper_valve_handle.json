@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " R ",
+      "RAR",
+      " R "
+    ],
+    "key": {
+      "R": {
+        "tag": "forge:rods/copper"
+      },
+      "A": {
+        "tag": "forge:ingots/wrought_iron"
+      }
+    },
+    "result": {
+      "item": "create:copper_valve_handle"
+    }
+}

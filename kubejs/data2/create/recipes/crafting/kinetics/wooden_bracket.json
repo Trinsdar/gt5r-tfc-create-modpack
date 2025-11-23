@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "PCP"
+  ],
+  "key": {
+    "S": {
+      "tag": "forge:rods/wooden"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "C": {
+      "tag": "forge:ingots/wrought_iron"
+    }
+  },
+  "result": {
+    "item": "create:wooden_bracket",
+    "count": 4
+  }
+}

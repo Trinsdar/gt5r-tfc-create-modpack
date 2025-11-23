@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " A ",
+      "AIA",
+      " C "
+    ],
+    "key": {
+      "C": {
+        "item": "create:andesite_casing"
+      },
+      "A": {
+        "tag": "forge:ingots/wrought_iron"
+      },
+      "I": {
+        "item": "tfc:metal/ingot/cast_iron"
+      }
+    },
+    "result": {
+      "item": "create:mechanical_drill"
+    }
+  }

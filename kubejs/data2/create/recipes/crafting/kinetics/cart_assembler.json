@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CRC",
+    "L L"
+  ],
+  "key": {
+    "L": {
+      "tag": "minecraft:logs"
+    },
+    "R": {
+      "tag": "forge:dusts/redstone"
+    },
+    "C": {
+      "tag": "forge:ingots/wrought_iron"
+    }
+  },
+  "result": {
+    "item": "create:cart_assembler"
+  }
+}
