@@ -28,6 +28,7 @@ craftingTable.remove(<item:create:andesite_alloy>);
 <recipetype:create:mixing>.remove(<item:create:andesite_alloy>);
 
 
+//removed to prevent access
 craftingTable.removeByName("create:crafting/materials/zinc_block_from_compacting");
 craftingTable.removeByName("create:crafting/materials/zinc_ingot_from_compacting");
 craftingTable.removeByName("create:crafting/materials/brass_block_from_compacting");
@@ -36,6 +37,13 @@ craftingTable.removeByName("create:crafting/materials/copper_ingot");
 craftingTable.removeByName("create:crafting/kinetics/empty_blaze_burner");
 craftingTable.removeByName("create:crafting/kinetics/propeller");
 craftingTable.removeByName("create:crafting/kinetics/brass_hand");
+craftingTable.removeByName("minecraft:honey_bottle");
+<recipetype:create:milling>.removeByName("create:milling/granite");
+<recipetype:create:crushing>.removeByName("create:crushing/diorite");
+<recipetype:create:crushing>.removeByName("create:crushing/diorite_recycling");
+<recipetype:create:milling>.removeByName("create:milling/terracotta");
+<recipetype:create:milling>.removeByName("create:milling/wool");
+<recipetype:create:crushing>.removeByName("create:crushing/wool");
 
 //removed vanilla foods
 craftingTable.removeByName("minecraft:bread");
