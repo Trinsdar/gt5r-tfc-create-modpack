@@ -22,14 +22,14 @@ var metals = ["bismuth_bronze", "bismuth", "black_bronze", "black_steel", "blue_
   "brass", "bronze", "cast_iron", "copper", "gold", "nickel", "red_steel", "rose_gold", "silver", "steel", "sterling_silver", "tin", "wrought_iron", "zinc"];
 
 for metal in metals {
-  compactor.addRecipe("compacting/double_ingots/" + metal, heated, [BracketHandlers.getItem("tfc:metal/double_ingot/" + metal)], [BracketHandlers.getItem("tfc:metal/ingot/" + metal) * 2, <tag:items:tfc:flux>]);
-  compactor.addRecipe("compacting/double_sheets/" + metal, heated, [BracketHandlers.getItem("tfc:metal/double_sheet/" + metal)], [BracketHandlers.getItem("tfc:metal/sheet/" + metal) * 2, <tag:items:tfc:flux>]);
-  //compactor.addRecipe("compacting/sheets_from_fluid/" + metal, noHeat, [BracketHandlers.getItem("tfc:metal/sheet/" + metal), <item:kubejs:crystalisation_catalyst> % 50], [<item:kubejs:crystalisation_catalyst>], [BracketHandlers.getFluid("tfc:metal/" + metal) * 200]);
+  compactor.addRecipe("compacting/double_ingots/" + metal, heated, [<item:tfc:metal/double_ingot/${metal}>], [<item:tfc:metal/ingot/${metal}> * 2, <tag:items:tfc:flux>]);
+  compactor.addRecipe("compacting/double_sheets/" + metal, heated, [<item:tfc:metal/double_sheet/${metal}>], [<item:tfc:metal/sheet/${metal}> * 2, <tag:items:tfc:flux>]);
+  compactor.addRecipe("compacting/sheets_from_fluid/" + metal, noHeat, [<item:tfc:metal/sheet/${metal}>, <item:kubejs:crystalisation_catalyst> % 50], [<item:kubejs:crystalisation_catalyst>], [<fluid:tfc:metal/${metal}> * 200]);
 }
 
 var sands = ["black", "brown", "green", "pink", "red", "white", "yellow"];
 for sand in sands {
-    compactor.addRecipe("compacting/sandstone/" + sand, noHeat, [BracketHandlers.getItem("tfc:raw_sandstone/" + sand)], [BracketHandlers.getItem("tfc:sand/" + sand) * 4]);
+    compactor.addRecipe("compacting/sandstone/" + sand, noHeat, [<item:tfc:raw_sandstone/${sand}>], [<item:tfc:sand/${sand}> * 4]);
 }
 
 compactor.addRecipe("compacting/cobble/andesite", heated, [<item:tfc:rock/cobble/andesite> * 4], [<item:tfc:dirt/loam> * 2, <item:tfc:dirt/silt> * 2]);
