@@ -11,3 +11,8 @@ for block in createBlocks {
   <tag:blocks:tfc:toughness_1>.add(block);
 
 }
+
+//Fluid Tags
+<tag:fluids:forge:milk>.add(<fluid:firmalife:coconut_milk>);
+<tag:fluids:forge:milk>.add(<fluid:firmalife:goat_milk>);
+<tag:fluids:forge:milk>.add(<fluid:firmalife:yak_milk>);
