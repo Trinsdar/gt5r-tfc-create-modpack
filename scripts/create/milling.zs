@@ -16,3 +16,13 @@ var gems = ["amethyst", "diamond", "emerald", "lapis_lazuli", "opal", "pyrite", 
 for gem in gems {
   milling.addRecipe("milling/gems/" + gem, [<item:tfc:gem/${gem}>], <item:tfc:ore/${gem}>, 50);
 }
+milling.addRecipe("milling/compost", [<item:tfc:powder/saltpeter>, <item:minecraft:bone_meal> * 2], <item:tfc:compost>, 50);
+milling.addRecipe("milling/deposit_cassiterite", [<item:tfc:ore/small_cassiterite> % 90], <tag:items:integration:deposit_cassiterite>, 100);
+milling.addRecipe("milling/deposit_native_copper", [<item:tfc:ore/small_native_copper> % 90], <tag:items:integration:deposit_native_copper>, 100);
+milling.addRecipe("milling/deposit_native_silver", [<item:tfc:ore/small_native_silver> % 90], <tag:items:integration:deposit_native_silver>, 100);
+milling.addRecipe("milling/deposit_native_gold", [<item:tfc:ore/small_native_gold> % 90], <tag:items:integration:deposit_native_gold>, 100);
+milling.addRecipe("milling/leaves", [<item:tfc:straw>, <item:tfc:straw> % 50], <tag:items:minecraft:leaves>, 50);
+milling.addRecipe("milling/mud", [<item:minecraft:clay_ball> % 50], <tag:items:tfc:mud>, 250);
+milling.addRecipe("milling/olive", [<item:tfc:olive_paste> * 2], <item:tfc:food/olive>, 50);
+milling.addRecipe("milling/raw_limestone", [<item:tfc:ore/gypsum>], <item:tfc:rock/raw/limestone>, 250);
+milling.addRecipe("milling/saltpeter", [<item:tfc:powder/salt> % 50], <item:tfc:powder/saltpeter>, 100);
