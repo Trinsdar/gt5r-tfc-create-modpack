@@ -47,6 +47,53 @@ milling.addRecipe("milling/ore/cryolite", [<item:minecraft:redstone> * 4], <item
 milling.addRecipe("milling/ore/cinnabar", [<item:minecraft:redstone> * 4], <item:tfc:ore/cinnabar>, 100);
 milling.addRecipe("milling/ore/redstone", [<item:minecraft:redstone> * 4], <item:antimatter_shared:raw_ore_redstone>, 100);
 milling.addRecipe("milling/ore/borax", [<item:tfc:powder/flux> * 6], <item:tfc:ore/borax>, 100);
+
+milling.addRecipe("milling/flora/allium",[<item:minecraft:purple_dye> * 2], <item:tfc:plant/allium>, 50);
+milling.addRecipe("milling/flora/athyrium_fern", [<item:minecraft:magenta_dye> * 2], <item:tfc:plant/athyrium_fern>, 50);
+milling.addRecipe("milling/flora/barrel_cactus", [<item:minecraft:green_dye> * 2], <item:tfc:plant/barrel_cactus>, 50);
+milling.addRecipe("milling/flora/black_orchid", [<item:minecraft:purple_dye> * 2], <item:tfc:plant/black_orchid>, 50);
+milling.addRecipe("milling/flora/blue_orchid", [<item:minecraft:blue_dye> * 2], <item:tfc:plant/blue_orchid>, 50);
+milling.addRecipe("milling/flora/butterfly_milkweed", [<item:minecraft:orange_dye> * 2], <item:tfc:plant/butterfly_milkweed>, 50);
+milling.addRecipe("milling/flora/calendula", [<item:minecraft:yellow_dye> * 2], <item:tfc:plant/calendula>, 50);
+milling.addRecipe("milling/flora/canna", [<item:minecraft:orange_dye> * 2], <item:tfc:plant/canna>, 50);
+milling.addRecipe("milling/flora/dandelion", [<item:minecraft:yellow_dye> * 2], <item:tfc:plant/dandelion>, 50);
+milling.addRecipe("milling/flora/field_horsetail", [<item:minecraft:brown_dye> * 2], <item:tfc:plant/field_horsetail>, 50);
+milling.addRecipe("milling/flora/foxglove", [<item:minecraft:pink_dye> * 2], <item:tfc:plant/foxglove>, 50);
+milling.addRecipe("milling/flora/goldenrod", [<item:minecraft:yellow_dye> * 2], <item:tfc:plant/goldenrod>, 50);
+milling.addRecipe("milling/flora/grape_hyacinth", [<item:minecraft:blue_dye> * 2], <item:tfc:plant/grape_hyacinth>, 50);
+milling.addRecipe("milling/flora/guzmania", [<item:minecraft:red_dye> * 2], <item:tfc:plant/guzmania>, 50);
+milling.addRecipe("milling/flora/houstonia", [<item:minecraft:white_dye> * 2], <item:tfc:plant/houstonia>, 50);
+milling.addRecipe("milling/flora/laprador_tea", [<item:minecraft:light_blue_dye> * 2], <item:tfc:plant/laprador_tea>, 50);
+milling.addRecipe("milling/flora/meads_milkweed", [<item:minecraft:yellow_dye> * 2], <item:tfc:plant/meads_milkweed>, 50);
+milling.addRecipe("milling/flora/morning_glory", [<item:minecraft:magenta_dye> * 2], <item:tfc:plant/morning_glory>, 50);
+milling.addRecipe("milling/flora/moss", [<item:minecraft:lime_dye> * 2], <item:tfc:plant/moss>, 50);
+milling.addRecipe("milling/flora/nasturtium", [<item:minecraft:orange_dye> * 2], <item:tfc:plant/nasturtium>, 50);
+milling.addRecipe("milling/flora/oxeye_daisy", [<item:minecraft:white_dye> * 2], <item:tfc:plant/oxeye_daisy>, 50);
+milling.addRecipe("milling/flora/perovskia", [<item:minecraft:purple_dye> * 2], <item:tfc:plant/perovskia>, 50);
+milling.addRecipe("milling/flora/poppy", [<item:minecraft:red_dye> * 2], <item:tfc:plant/poppy>, 50);
+milling.addRecipe("milling/flora/primrose", [<item:minecraft:white_dye> * 2], <item:tfc:plant/primrose>, 50);
+milling.addRecipe("milling/flora/pulsatilla", [<item:minecraft:magenta_dye> * 2], <item:tfc:plant/pulsatilla>, 50);
+milling.addRecipe("milling/flora/reindeer_lichen", [<item:minecraft:green_dye> * 2], <item:tfc:plant/reindeer_lichen>, 50);
+milling.addRecipe("milling/flora/rose", [<item:minecraft:red_dye> * 2], <item:tfc:plant/rose>, 50);
+milling.addRecipe("milling/flora/sacred_datura", [<item:minecraft:pink_dye> * 2], <item:tfc:plant/sacred_datura>, 50);
+milling.addRecipe("milling/flora/sapphire_tower", [<item:minecraft:light_blue_dye> * 2], <item:tfc:plant/sapphire_tower>, 50);
+milling.addRecipe("milling/flora/sargassam", [<item:minecraft:brown_dye> * 2], <item:tfc:plant/sargassam>, 50);
+var colors = ["pink", "red", "white", "yellow"];
+for color in colors {
+  milling.addRecipe("milling/flora/snapdragon_" + color, [<item:minecraft:${color}_dye> * 2], <item:tfc:plant/snapdragon_${color}>, 50);
+}
+milling.addRecipe("milling/flora/spanish_moss", [<item:minecraft:white_dye> * 2], <item:tfc:plant/spanish_moss>, 50);
+milling.addRecipe("milling/flora/strelitzia", [<item:minecraft:orange_dye> * 2], <item:tfc:plant/strelitzia>, 50);
+milling.addRecipe("milling/flora/trillium", [<item:minecraft:white_dye> * 2], <item:tfc:plant/trillium>, 50);
+milling.addRecipe("milling/flora/tropical_milkweed", [<item:minecraft:red_dye> * 2], <item:tfc:plant/tropical_milkweed>, 50);
+colors = ["orange", "pink", "red", "white"];
+for color in colors {
+  milling.addRecipe("milling/flora/tulip_" + color, [<item:minecraft:${color}_dye> * 2], <item:tfc:plant/tulip_${color}>, 50);
+}
+milling.addRecipe("milling/flora/vriesea", [<item:minecraft:red_dye> * 2], <item:tfc:plant/vriesea>, 50);
+milling.addRecipe("milling/flora/water_canna", [<item:minecraft:orange_dye> * 2], <item:tfc:plant/water_canna>, 50);
+milling.addRecipe("milling/flora/yucca", [<item:minecraft:light_gray_dye> * 2], <item:tfc:plant/yucca>, 50);
+
 milling.addRecipe("milling/compost", [<item:tfc:powder/saltpeter>, <item:minecraft:bone_meal> * 2], <item:tfc:compost>, 50);
 milling.addRecipe("milling/deposit_cassiterite", [<item:tfc:ore/small_cassiterite> % 90], <tag:items:integration:deposit_cassiterite>, 100);
 milling.addRecipe("milling/deposit_native_copper", [<item:tfc:ore/small_native_copper> % 90], <tag:items:integration:deposit_native_copper>, 100);
