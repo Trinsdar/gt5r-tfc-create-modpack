@@ -16,6 +16,30 @@ var gems = ["amethyst", "diamond", "emerald", "lapis_lazuli", "opal", "pyrite", 
 for gem in gems {
   milling.addRecipe("milling/gems/" + gem, [<item:tfc:gem/${gem}>], <item:tfc:ore/${gem}>, 50);
 }
+
+var ores = ["bismuthinite", "cassiterite", "garnierite", "hematite", "limonite", "magnetite", "malachite", "native_copper", "native_gold", "native_silver", "sphalerite", "tetrahedrite"];
+for ore in ores {
+  var oreOutput = ore;
+  if(ore == "bismuthinite") oreOutput = "bismuth";
+  if(ore == "limonite") oreOutput = "yellow_limonite";
+  if(ore.startsWith("native_")){
+    oreOutput = ore[7 .. $];
+  }
+  milling.addRecipe("milling/ore/small/" + ore, [<item:antimatter_shared:crushed_${oreOutput}> % 10], <item:tfc:ore/small_${ore}>, 100);
+  milling.addRecipe("milling/ore/poor/" + ore, [<item:antimatter_shared:crushed_${oreOutput}> % 25], <item:tfc:ore/poor_${ore}>, 100);
+  milling.addRecipe("milling/ore/normal/" + ore, [<item:antimatter_shared:crushed_${oreOutput}> % 50], <item:tfc:ore/normal_${ore}>, 100);
+  milling.addRecipe("milling/ore/rich/" + ore, [<item:antimatter_shared:crushed_${oreOutput}>], <item:tfc:ore/rich_${ore}>, 100);
+}
+
+ores = ["graphite", "kaolinite", "saltpeter", "sulfur", "sylvite"];
+for ore in ores {
+  milling.addRecipe("milling/ore/" + ore, [<item:tfc:powder/${ore}> * 4], <item:tfc:ore/${ore}>, 100);
+}
+milling.addRecipe("milling/ore/halite", [<item:tfc:powder/salt> * 4], <item:tfc:ore/halite>, 100);
+milling.addRecipe("milling/ore/cryolite", [<item:minecraft:redstone> * 4], <item:tfc:ore/cryolite>, 100);
+milling.addRecipe("milling/ore/cinnabar", [<item:minecraft:redstone> * 4], <item:tfc:ore/cinnabar>, 100);
+milling.addRecipe("milling/ore/redstone", [<item:minecraft:redstone> * 4], <item:antimatter_shared:raw_ore_redstone>, 100);
+milling.addRecipe("milling/ore/borax", [<item:tfc:powder/flux> * 6], <item:tfc:ore/borax>, 100);
 milling.addRecipe("milling/compost", [<item:tfc:powder/saltpeter>, <item:minecraft:bone_meal> * 2], <item:tfc:compost>, 50);
 milling.addRecipe("milling/deposit_cassiterite", [<item:tfc:ore/small_cassiterite> % 90], <tag:items:integration:deposit_cassiterite>, 100);
 milling.addRecipe("milling/deposit_native_copper", [<item:tfc:ore/small_native_copper> % 90], <tag:items:integration:deposit_native_copper>, 100);
