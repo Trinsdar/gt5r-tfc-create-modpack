@@ -1,6 +1,13 @@
 var milling = <recipetype:create:milling>;
 
 
+milling.removeByName("create:milling/charcoal");
+milling.addRecipe("milling/charcoal", [<item:tfc:powder/charcoal> * 4], <item:minecraft:charcoal>, 100);
+milling.removeByName("create:milling/gravel");
+milling.addRecipe("milling/gravel", [<item:minecraft:flint>], <tag:items:forge:gravel>, 250);
+milling.removeByName("create:milling/saddle");
+milling.addRecipe("milling/saddle", [<item:minecraft:leather> % 75], <item:minecraft:saddle>, 200);
+
 var stones = ["andesite", "basalt", "chalk", "chert", "claystone", "conglomerate", "dacite", "diorite", "dolomite", "gabbro",
   "gneiss", "granite", "limestone", "marble", "phyllite", "quartzite", "rhyolite", "schist", "shale", "slate"];
 for stone in stones {
