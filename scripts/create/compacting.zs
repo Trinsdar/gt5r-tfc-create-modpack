@@ -16,6 +16,14 @@ compactor.registerRecipe("compacting/soy_milk", rb => {
   rb.withItemOutputs([<item:tfc:straw>]);
 });
 
+compactor.addRecipe("compacting/refined_iron_bloom", heated, [<item:tfc:refined_iron_bloom>], [<item:tfc:raw_iron_bloom>]);
+compactor.addRecipe("compacting/wrought_iron_ingot", heated, [<item:tfc:metal/ingot/wrought_iron>], [<item:tfc:refined_iron_bloom>]);
+compactor.addRecipe("compacting/high_carbon_steel_ingot", heated, [<item:tfc:metal/ingot/high_carbon_steel>], [<item:tfc:metal/ingot/pig_iron>]);
+var steels = ["", "black_", "red_", "blue_"];
+for steel in steels {
+  compactor.addRecipe("compacting/" + steel + "steel_ingot", heated, [<item:tfc:metal/ingot/${steel}steel>], [<item:tfc:metal/ingot/high_carbon_${steel}steel>]);
+}
+
 //compactor.addRecipe("coal_block", noHeat, [<item:minecraft:coal_block>], [item:minecraft:charcoal> * 8, <item:tfc:peat>]);
 
 var metals = ["bismuth_bronze", "bismuth", "black_bronze", "black_steel", "blue_steel", 
