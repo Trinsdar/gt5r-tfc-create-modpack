@@ -63,7 +63,7 @@ milling.addRecipe("milling/flora/goldenrod", [<item:minecraft:yellow_dye> * 2], 
 milling.addRecipe("milling/flora/grape_hyacinth", [<item:minecraft:blue_dye> * 2], <item:tfc:plant/grape_hyacinth>, 50);
 milling.addRecipe("milling/flora/guzmania", [<item:minecraft:red_dye> * 2], <item:tfc:plant/guzmania>, 50);
 milling.addRecipe("milling/flora/houstonia", [<item:minecraft:white_dye> * 2], <item:tfc:plant/houstonia>, 50);
-milling.addRecipe("milling/flora/laprador_tea", [<item:minecraft:light_blue_dye> * 2], <item:tfc:plant/laprador_tea>, 50);
+milling.addRecipe("milling/flora/labrador_tea", [<item:minecraft:light_blue_dye> * 2], <item:tfc:plant/labrador_tea>, 50);
 milling.addRecipe("milling/flora/meads_milkweed", [<item:minecraft:yellow_dye> * 2], <item:tfc:plant/meads_milkweed>, 50);
 milling.addRecipe("milling/flora/morning_glory", [<item:minecraft:magenta_dye> * 2], <item:tfc:plant/morning_glory>, 50);
 milling.addRecipe("milling/flora/moss", [<item:minecraft:lime_dye> * 2], <item:tfc:plant/moss>, 50);
@@ -77,7 +77,7 @@ milling.addRecipe("milling/flora/reindeer_lichen", [<item:minecraft:green_dye> *
 milling.addRecipe("milling/flora/rose", [<item:minecraft:red_dye> * 2], <item:tfc:plant/rose>, 50);
 milling.addRecipe("milling/flora/sacred_datura", [<item:minecraft:pink_dye> * 2], <item:tfc:plant/sacred_datura>, 50);
 milling.addRecipe("milling/flora/sapphire_tower", [<item:minecraft:light_blue_dye> * 2], <item:tfc:plant/sapphire_tower>, 50);
-milling.addRecipe("milling/flora/sargassam", [<item:minecraft:brown_dye> * 2], <item:tfc:plant/sargassam>, 50);
+milling.addRecipe("milling/flora/sargassum", [<item:minecraft:brown_dye> * 2], <item:tfc:plant/sargassum>, 50);
 var colors = ["pink", "red", "white", "yellow"];
 for color in colors {
   milling.addRecipe("milling/flora/snapdragon_" + color, [<item:minecraft:${color}_dye> * 2], <item:tfc:plant/snapdragon_${color}>, 50);
