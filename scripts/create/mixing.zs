@@ -1,3 +1,4 @@
+import crafttweaker.api.item.IItemStack;
 var mixer = <recipetype:create:mixing>;
 var noHeat = <constant:create:heat_condition:none>;
 var heated = <constant:create:heat_condition:heated>;
@@ -29,20 +30,22 @@ var dirts = ["loam", "sandy_loam", "silt", "silty_loam"];
 for dirt in dirts {
   mixer.addRecipe("mixing/mud/" + dirt + "_mud", noHeat, [<item:tfc:mud/${dirt}>], [<item:tfc:dirt/${dirt}>], [<fluid:minecraft:water> * 125], 10);
 }
-
-mixer.addRecipe("mixing/alternate_stone/asurine", noHeat, [<item:create:asurine> * 4], [<item:tfc:aggregate> * 4, <item:tfc:ore/small_malachite>], [<fluid:minecraft:lava> * 200]);
-mixer.addRecipe("mixing/alternate_stone/calcite", noHeat, [<item:minecraft:calcite> * 4], [<item:tfc:aggregate> * 4, <item:tfc:ore/small_native_silver>], [<fluid:minecraft:lava> * 200]);
-mixer.addRecipe("mixing/alternate_stone/andesite", noHeat, [<item:minecraft:andesite> * 4], [<item:tfc:aggregate> * 4, <item:tfc:ore/small_cassiterite>], [<fluid:minecraft:lava> * 200]);
-mixer.addRecipe("mixing/alternate_stone/crimsite", noHeat, [<item:create:crimsite> * 4], [<item:tfc:aggregate> * 4, <item:tfc:ore/cinnabar>], [<fluid:minecraft:lava> * 200]);
-mixer.addRecipe("mixing/alternate_stone/deepslate", noHeat, [<item:minecraft:deepslate> * 4], [<item:tfc:aggregate> * 4, <item:tfc:ore/small_magnetite>], [<fluid:minecraft:lava> * 200]);
-mixer.addRecipe("mixing/alternate_stone/diorite", noHeat, [<item:minecraft:diorite> * 4], [<item:tfc:aggregate> * 4, <item:tfc:ore/small_tetrahedrite>], [<fluid:minecraft:lava> * 200]);
-mixer.addRecipe("mixing/alternate_stone/dripstone", noHeat, [<item:minecraft:dripstone_block> * 4], [<item:tfc:aggregate> * 4, <item:tfc:ore/small_native_copper>], [<fluid:minecraft:lava> * 200]);
-mixer.addRecipe("mixing/alternate_stone/granite", noHeat, [<item:minecraft:granite> * 4], [<item:tfc:aggregate> * 4, <item:tfc:ore/small_hematite>], [<fluid:minecraft:lava> * 200]);
-mixer.addRecipe("mixing/alternate_stone/limestone", noHeat, [<item:create:limestone> * 4], [<item:tfc:aggregate> * 4, <item:tfc:ore/small_sphalerite>], [<fluid:minecraft:lava> * 200]);
-mixer.addRecipe("mixing/alternate_stone/ochrum", noHeat, [<item:create:ochrum> * 4], [<item:tfc:aggregate> * 4, <item:tfc:ore/small_native_gold>], [<fluid:minecraft:lava> * 200]);
-mixer.addRecipe("mixing/alternate_stone/scoria", noHeat, [<item:create:scoria> * 4], [<item:tfc:aggregate> * 4, <item:tfc:ore/small_limonite>], [<fluid:minecraft:lava> * 200]);
-mixer.addRecipe("mixing/alternate_stone/tuff", noHeat, [<item:minecraft:tuff> * 4], [<item:tfc:aggregate> * 4, <item:tfc:ore/small_garnierite>], [<fluid:minecraft:lava> * 200]);
-mixer.addRecipe("mixing/alternate_stone/veridium", noHeat, [<item:create:veridium> * 4], [<item:tfc:aggregate> * 4, <item:tfc:ore/small_bismuthinite>], [<fluid:minecraft:lava> * 200]);
+val alternateStones as string[string] = {
+    "asurine" : "small_malachite", "crimsite" : "cinnabar", "ochrum" : "small_native_gold",
+    "scoria" : "small_limonite", "veridium" : "small_bismuthinite"
+};
+val alternateMCStones as string[string] = {
+    "calcite" : "small_native_silver", "andesite" : "small_cassiterite", "deepslate" : "small_magnetite",
+    "diorite" : "small_tetrahedrite", "dripstone" : "small_native_copper", "granite" : "small_hematite",
+    "tuff" : "small_garnierite",
+};
+for stone, ore in alternateStones {
+  mixer.addRecipe("mixing/alternate_stone/" + stone, noHeat, [<item:create:${stone}> * 4], [<item:tfc:aggregate> * 4, <item:tfc:ore/${ore}>], [<fluid:minecraft:lava> * 200]);
+}
+for stone, ore in alternateMCStones {
+  var suffix = stone == "dripstone" ? "_block" : "";
+  mixer.addRecipe("mixing/alternate_stone/" + stone, noHeat, [<item:minecraft:${stone}${suffix}> * 4], [<item:tfc:aggregate> * 4, <item:tfc:ore/${ore}>], [<fluid:minecraft:lava> * 200]);
+}
 
 mixer.addRecipe("mixing/bituminous_coal", noHeat, [<item:tfc:ore/bituminous_coal> * 3], [<item:tfc:ore/lignite> * 3, <item:tfc:powder/coke> * 2]);
 mixer.addRecipe("mixing/bone_broth", heated, [<item:kubejs:bone_broth>], [<item:minecraft:bone> * 2, <tag:items:tfc:foods/vegetables> * 2], [<fluid:minecraft:water> * 200, <tag:fluids:forge:milk> * 200]);
@@ -73,20 +76,18 @@ mixer.addRecipe("mixing/fluid_output/olive_oil_water", heated, [<fluid:tfc:olive
 mixer.addRecipe("mixing/fluid_output/solder", heated, [<fluid:kubejs:solder> * 100], [<tag:items:tfc:flux> * 10], [<fluid:tfc:metal/tin> * 90, <fluid:tfc:metal/silver> * 5, <fluid:tfc:metal/copper> * 5]);
 mixer.addRecipe("mixing/fluid_output/tallow", heated, [<fluid:tfc:tallow> * 1000], [<item:tfc:blubber> * 5], [<fluid:minecraft:water> * 1000], 400);
 
-mixer.addRecipe("mixing/fluid_output/potions/beer", heated, [<fluid:kubejs:potion_beer> * 40], [<item:tfc:powder/salt>], [<fluid:tfc:beer> * 100], 200);
-mixer.addRecipe("mixing/fluid_output/potions/cider", heated, [<fluid:kubejs:potion_cider> * 40], [<item:minecraft:redstone>], [<fluid:tfc:cider> * 100], 200);
-mixer.addRecipe("mixing/fluid_output/potions/corn_whiskey", heated, [<fluid:kubejs:potion_corn_whiskey> * 40], [<item:minecraft:sugar>], [<fluid:tfc:corn_whiskey> * 100], 200);
-mixer.addRecipe("mixing/fluid_output/potions/rum", heated, [<fluid:kubejs:potion_rum> * 40], [<item:minecraft:gunpowder>], [<fluid:tfc:rum> * 100], 200);
-mixer.addRecipe("mixing/fluid_output/potions/rye_whiskey", heated, [<fluid:kubejs:potion_rye_whiskey> * 40], [<item:minecraft:sugar>], [<fluid:tfc:rye_whiskey> * 100], 200);
-mixer.addRecipe("mixing/fluid_output/potions/sake", heated, [<fluid:kubejs:potion_sake> * 40], [<item:tfc:powder/kaolinite>], [<fluid:tfc:sake> * 100], 200);
-mixer.addRecipe("mixing/fluid_output/potions/vodka", heated, [<fluid:kubejs:potion_vodka> * 40], [<item:minecraft:glowstone_dust>], [<fluid:tfc:vodka> * 100], 200);
-mixer.addRecipe("mixing/fluid_output/potions/whiskey", heated, [<fluid:kubejs:potion_whiskey> * 40], [<item:minecraft:sugar>], [<fluid:tfc:whiskey> * 100], 200);
+val potionMap as IItemStack[string] = {
+    "beer" : <item:tfc:powder/salt>,
+    "cider" : <item:minecraft:redstone>,
+    "corn_whiskey" : <item:minecraft:sugar>,
+    "rum" : <item:minecraft:gunpowder>,
+    "rye_whiskey" : <item:minecraft:sugar>,
+    "sake" : <item:tfc:powder/kaolinite>,
+    "vodka" : <item:minecraft:glowstone_dust>,
+    "whiskey" : <item:minecraft:sugar>
+};
 
-mixer.addRecipe("mixing/fluid_output/strong_potions/beer", superheated, [<fluid:kubejs:potion_strong_beer> * 40], [<item:tfc:powder/salt>], [<fluid:kubejs:potion_beer> * 100], 200);
-mixer.addRecipe("mixing/fluid_output/strong_potions/cider", superheated, [<fluid:kubejs:potion_strong_cider> * 40], [<item:minecraft:redstone>], [<fluid:kubejs:potion_cider> * 100], 200);
-mixer.addRecipe("mixing/fluid_output/strong_potions/corn_whiskey", superheated, [<fluid:kubejs:potion_strong_corn_whiskey> * 40], [<item:minecraft:sugar>], [<fluid:kubejs:potion_corn_whiskey> * 100], 200);
-mixer.addRecipe("mixing/fluid_output/strong_potions/rum", superheated, [<fluid:kubejs:potion_strong_rum> * 40], [<item:minecraft:gunpowder>], [<fluid:kubejs:potion_rum> * 100], 200);
-mixer.addRecipe("mixing/fluid_output/strong_potions/rye_whiskey", superheated, [<fluid:kubejs:potion_strong_rye_whiskey> * 40], [<item:minecraft:sugar>], [<fluid:kubejs:potion_rye_whiskey> * 100], 200);
-mixer.addRecipe("mixing/fluid_output/strong_potions/sake", superheated, [<fluid:kubejs:potion_strong_sake> * 40], [<item:tfc:powder/kaolinite>], [<fluid:kubejs:potion_sake> * 100], 200);
-mixer.addRecipe("mixing/fluid_output/strong_potions/vodka", superheated, [<fluid:kubejs:potion_strong_vodka> * 40], [<item:minecraft:glowstone_dust>], [<fluid:kubejs:potion_vodka> * 100], 200);
-mixer.addRecipe("mixing/fluid_output/strong_potions/whiskey", superheated, [<fluid:kubejs:potion_strong_whiskey> * 40], [<item:minecraft:sugar>], [<fluid:kubejs:potion_whiskey> * 100], 200);
+for potion, ingredient in potionMap {
+  mixer.addRecipe("mixing/fluid_output/potions/" + potion, heated, [<fluid:kubejs:potion_${potion}> * 40], [ingredient], [<fluid:tfc:${potion}> * 100], 200);
+  mixer.addRecipe("mixing/fluid_output/strong_potions/" + potion, superheated, [<fluid:kubejs:potion_strong_${potion}> * 40], [ingredient], [<fluid:kubejs:potion_${potion}> * 100], 200);
+}
