@@ -1,5 +1,37 @@
 var sequencedAssembly = <recipetype:create:sequenced_assembly>;
 
+sequencedAssembly.remove(<item:create:precision_mechanism>);
+sequencedAssembly.addRecipe(sequencedAssembly.builder("sequenced_assembly/precision_mechanism")
+        .transitionTo(<item:create:incomplete_precision_mechanism>)
+        .require(<item:tfc:metal/sheet/sterling_silver>)
+        .loops(4)
+        .addOutput(<item:create:precision_mechanism>, 1)
+        .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:cogwheel>))
+        .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:tfc:metal/gold> * 50))
+        .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:tfc:brass_mechanisms>))
+        );
+sequencedAssembly.remove(<item:create:sturdy_sheet>);
+sequencedAssembly.addRecipe(sequencedAssembly.builder("sequenced_assembly/study_sheet")
+        .transitionTo(<item:create:unprocessed_obsidian_sheet>)
+        .require(<item:create:powdered_obsidian>)
+        .loops(1)
+        .addOutput(<item:create:sturdy_sheet>, 1)
+        .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:tfc:metal/nickel> * 50))
+        .addStep<mods.createtweaker.PressingRecipe>((rb) => rb)
+        .addStep<mods.createtweaker.PressingRecipe>((rb) => rb)
+        );
+sequencedAssembly.remove(<item:create:track>);
+sequencedAssembly.addRecipe(sequencedAssembly.builder("sequenced_assembly/track")
+        .transitionTo(<item:create:incomplete_track>)
+        .require(<tag:items:forge:smooth_stone_slab>)
+        .loops(1)
+        .addOutput(<item:create:track> * 4, 1)
+        .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:rods/steel>))
+        .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:rods/steel>))
+        .addStep<mods.createtweaker.PressingRecipe>((rb) => rb)
+        );
+
+
 //sequencedAssembly.addRecipe(sequencedAssembly.builder("sequenced_assembly/brass_mechanisms")
 //        .transitionTo(<item:kubejs:incomplete_brass_mechanisms>)
 //        .require(<item:tfc:metal/sheet/brass>)
