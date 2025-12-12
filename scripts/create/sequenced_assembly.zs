@@ -59,12 +59,12 @@ sequencedAssembly.addRecipe(sequencedAssembly.builder("sequenced_assembly/solder
         .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:ingots/wrought_iron>))
         .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:ingots/wrought_iron>))
 );
-
+craftingTable.remove(<item:create:display_board>);
 sequencedAssembly.addRecipe(sequencedAssembly.builder("sequenced_assembly/soldering/display_board")
         .transitionTo(<item:tfc:metal/ingot/wrought_iron>)
         .require(<item:tfc:metal/ingot/wrought_iron>)
         .loops(1)
-        .addOutput(<item:create:display_board> * 4, 1)
+        .addOutput(<item:create:display_board> * 2, 1)
         .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:kubejs:solder> * 100))
         .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:electron_tube>))
         .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:ingots/wrought_iron>))
@@ -86,15 +86,6 @@ sequencedAssembly.addRecipe(sequencedAssembly.builder("sequenced_assembly/solder
         .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:integration:chains>))
         .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:integration:chains>))
         .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:integration:chains>))
-);
-sequencedAssembly.addRecipe(sequencedAssembly.builder("sequenced_assembly/soldering/fluid_tank")
-        .transitionTo(<item:minecraft:glass>)
-        .require(<item:minecraft:glass>)
-        .loops(1)
-        .addOutput(<item:create:fluid_tank> * 4, 1)
-        .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:kubejs:solder> * 100))
-        .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:sheets/copper>))
-        .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:sheets/copper>))
 );
 sequencedAssembly.addRecipe(sequencedAssembly.builder("sequenced_assembly/soldering/mechanical_crafter")
         .transitionTo(<item:minecraft:crafting_table>)

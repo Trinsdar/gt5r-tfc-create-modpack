@@ -4,8 +4,7 @@
       "tag": "forge:sheets/steel"
     },
     "result": {
-      "item": "create:propeller",
-      "count": 2
+      "item": "create:propeller"
     },
     "tier": 4,
     "rules": [

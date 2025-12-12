@@ -4,7 +4,7 @@ craftingTable.addShaped("crafting/kinetics/attribute_filter", <item:create:attri
   [<item:tfc:metal/rod/brass>, <item:tfc:burlap_cloth>, <item:tfc:metal/rod/brass>]
   ]);
 craftingTable.remove(<item:create:basin>);
-craftingTable.addShaped("crafting/kinetics/basin", <item:create:basin> * 2, [
+craftingTable.addShaped("crafting/kinetics/basin", <item:create:basin>, [
   [<item:tfc:metal/ingot/cast_iron>, air, <item:tfc:metal/ingot/cast_iron>],
   [<item:tfc:metal/ingot/cast_iron>, <item:tfc:metal/ingot/cast_iron>, <item:tfc:metal/ingot/cast_iron>]
   ]);
@@ -26,17 +26,13 @@ craftingTable.addShaped("crafting/kinetics/encased_chain_drive", <item:create:en
   [<tag:items:integration:chains>, <tag:items:integration:chains>]
   ]);
 craftingTable.remove(<item:create:fluid_tank>);
-craftingTable.addShaped("crafting/kinetics/fluid_tank", <item:create:fluid_tank> * 2, [
+craftingTable.addShaped("crafting/kinetics/fluid_tank", <item:create:fluid_tank>, [
   [<item:tfc:metal/sheet/copper>],
   [<item:minecraft:glass>],
   [<item:tfc:metal/sheet/copper>]
   ]);
-craftingTable.remove(<item:create:gearbox>);
-craftingTable.addShaped("crafting/kinetics/gearbox", <item:create:gearbox>, [
-  [air, <item:create:cogwheel>, air],
-  [<item:create:cogwheel>, <tag:items:minecraft:planks>, <item:create:cogwheel>],
-  [air, <item:create:cogwheel>, air]
-  ]);
+craftingTable.remove(<item:create:fluid_valve>);
+craftingTable.addShapeless("crafting/kinetics/fluid_valve", <item:create:fluid_valve>, [<tag:items:forge:sheets/copper>, <item:create:fluid_pipe>]);
 craftingTable.remove(<item:create:goggles>);
 craftingTable.addShaped("crafting/kinetics/goggles", <item:create:goggles>, [
   [air, <item:minecraft:leather>, air],
@@ -52,11 +48,6 @@ craftingTable.addShaped("crafting/kinetics/hose_pulley", <item:create:hose_pulle
   [<item:create:copper_casing>, <item:tfc:jute_fiber>, <item:tfc:brass_mechanisms>],
   [air, <item:tfc:jute_fiber>, air],
   [air, <item:minecraft:bucket>, air]
-  ]);
-craftingTable.remove(<item:create:item_drain>);
-craftingTable.addShaped("crafting/kinetics/item_drain", <item:create:item_drain>, [
-  [<tag:items:integration:chain_mesh>],
-  [<item:create:copper_casing>]
   ]);
 craftingTable.remove(<item:create:item_vault>);
 craftingTable.addShaped("crafting/kinetics/item_vault", <item:create:item_vault> * 4, [
@@ -86,7 +77,7 @@ craftingTable.remove(<item:create:mechanical_press>);
 craftingTable.addShaped("crafting/kinetics/mechanical_press", <item:create:mechanical_press>, [
   [<item:create:piston_extension_pole>],
   [<item:create:andesite_casing>],
-  [<item:tfc:metal/double_ingot/cast_iron>]
+  [<item:tfc:metal/double_sheet/steel>]
   ]);
 craftingTable.remove(<item:create:mechanical_saw>);
 craftingTable.addShaped("crafting/kinetics/mechanical_saw", <item:create:mechanical_saw>, [
@@ -106,7 +97,7 @@ craftingTable.addShaped("crafting/kinetics/metal_girder", <item:create:metal_gir
 craftingTable.remove(<item:create:millstone>);
 craftingTable.addShaped("crafting/kinetics/millstone", <item:create:millstone>, [
   [<item:create:cogwheel>],
-  [<tag:items:minecraft:planks>],
+  [<item:create:andesite_casing>],
   [<tag:items:forge:stone>]
   ]);
 craftingTable.remove(<item:create:rope_pulley>);
@@ -125,6 +116,8 @@ craftingTable.addShaped("crafting/kinetics/smart_fluid_pipe", <item:create:smart
   [<item:create:fluid_pipe>],
   [<item:create:electron_tube>]
   ]);
+craftingTable.remove(<item:create:spout>);
+craftingTable.addShaped("crafting/kinetics/spout", <item:create:spout>, [[<item:create:copper_casing>], [<item:create:fluid_valve>]]);
 craftingTable.remove(<item:create:steam_engine>);
 craftingTable.addShaped("crafting/kinetics/steam_engine", <item:create:steam_engine>, [
   [<item:create:mechanical_arm>],
@@ -165,8 +158,8 @@ craftingTable.addShaped("crafting/kinetics/wrench", <item:create:wrench>, [
   [air, <item:minecraft:stick>]
   ]);
 craftingTable.remove(<item:create:chute>);
-craftingTable.addShaped("crafting/kinetics/chute", <item:create:chute> * 4, [
-  [<tag:items:forge:ingots/wrought_iron>, air, <tag:items:forge:ingots/wrought_iron>],
+craftingTable.addShaped("crafting/kinetics/chute", <item:create:chute>, [
+  [<tag:items:forge:ingots/cast_iron>, air, <tag:items:forge:ingots/cast_iron>],
   [air, <item:tfc:metal/ingot/cast_iron>, air]
   ]);
 craftingTable.remove(<item:create:mechanical_arm>);
@@ -223,10 +216,6 @@ craftingTable.addShaped("crafting/kinetics/nozzle", <item:create:nozzle>, [
   [air, <tag:items:forge:ingots/wrought_iron>, air],
   [air, <tag:items:minecraft:wool>, air],
   [<tag:items:forge:ingots/wrought_iron>, <tag:items:forge:ingots/wrought_iron>, <tag:items:forge:ingots/wrought_iron>]
-  ]);
-craftingTable.remove(<item:create:display_board>);
-craftingTable.addShaped("crafting/kinetics/display_board", <item:create:display_board> * 2, [
-  [<tag:items:forge:ingots/wrought_iron>, <item:create:electron_tube>, <tag:items:forge:ingots/wrought_iron>]
   ]);
 craftingTable.remove(<item:create:wooden_bracket>);
 craftingTable.addShaped("crafting/kinetics/wooden_bracket", <item:create:wooden_bracket> * 4, [

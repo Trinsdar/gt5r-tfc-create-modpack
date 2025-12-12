@@ -4,6 +4,14 @@ mechanicalCrafting.remove(<item:create:potato_cannon>);
 mechanicalCrafting.addRecipe("mechanical_crafting/potato_cannon", <item:create:potato_cannon>, 
 [[<tag:items:forge:ingots/wrought_iron>, <item:create:precision_mechanism>, <item:create:fluid_pipe>, <item:create:fluid_pipe>, <item:create:fluid_pipe>],
 [<tag:items:forge:ingots/copper>, <tag:items:forge:ingots/copper>, air, air, air]]);
+craftingTable.remove(<item:create:large_water_wheel>);
+mechanicalCrafting.addRecipe("mechanical_crafting/large_water_wheel", <item:create:large_water_wheel>, [
+  [air, <tag:items:tfc:lumber>, <tag:items:tfc:lumber>, <tag:items:tfc:lumber>, air],
+  [<tag:items:tfc:lumber>, <tag:items:tfc:lumber>, <tag:items:tfc:lumber>, <tag:items:tfc:lumber>, <tag:items:tfc:lumber>],
+  [<tag:items:tfc:lumber>, <tag:items:tfc:lumber>, <item:create:shaft>, <tag:items:tfc:lumber>, <tag:items:tfc:lumber>],
+  [<tag:items:tfc:lumber>, <tag:items:tfc:lumber>, <tag:items:tfc:lumber>, <tag:items:tfc:lumber>, <tag:items:tfc:lumber>],
+  [air, <tag:items:tfc:lumber>, <tag:items:tfc:lumber>, <tag:items:tfc:lumber>, air]
+]);
 
 var metals = ["bismuth_bronze", "black_bronze", "black_steel", "blue_steel", "bronze", "copper", "red_steel", "steel", "wrought_iron"];
 for metal in metals{

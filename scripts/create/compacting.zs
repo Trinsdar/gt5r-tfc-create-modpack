@@ -32,7 +32,7 @@ var metals = ["bismuth_bronze", "bismuth", "black_bronze", "black_steel", "blue_
 for metal in metals {
   compactor.addRecipe("compacting/double_ingots/" + metal, heated, [<item:tfc:metal/double_ingot/${metal}>], [<item:tfc:metal/ingot/${metal}> * 2, <tag:items:tfc:flux>]);
   compactor.addRecipe("compacting/double_sheets/" + metal, heated, [<item:tfc:metal/double_sheet/${metal}>], [<item:tfc:metal/sheet/${metal}> * 2, <tag:items:tfc:flux>]);
-  compactor.addRecipe("compacting/sheets_from_fluid/" + metal, noHeat, [<item:tfc:metal/sheet/${metal}>, <item:kubejs:crystalisation_catalyst> % 50], [<item:kubejs:crystalisation_catalyst>], [<fluid:tfc:metal/${metal}> * 200]);
+  compactor.addRecipe("compacting/sheets/" + metal, heated, [<item:tfc:metal/sheet/${metal}>], [<item:tfc:metal/double_ingot/${metal}>]);
 }
 
 var sands = ["black", "brown", "green", "pink", "red", "white", "yellow"];
@@ -40,23 +40,3 @@ for sand in sands {
     compactor.addRecipe("compacting/sandstone/" + sand, noHeat, [<item:tfc:raw_sandstone/${sand}>], [<item:tfc:sand/${sand}> * 4]);
 }
 
-compactor.addRecipe("compacting/cobble/andesite", heated, [<item:tfc:rock/cobble/andesite> * 4], [<item:tfc:dirt/loam> * 2, <item:tfc:dirt/silt> * 2]);
-compactor.addRecipe("compacting/cobble/basalt", heated, [<item:tfc:rock/cobble/basalt> * 4], [<item:tfc:dirt/loam> * 4]);
-compactor.addRecipe("compacting/cobble/chalk", heated, [<item:tfc:rock/cobble/chalk> * 4], [<item:tfc:dirt/sandy_loam> * 2, <item:tfc:dirt/silt> * 2]);
-compactor.addRecipe("compacting/cobble/chert", heated, [<item:tfc:rock/cobble/chert> * 4], [<item:tfc:dirt/loam> * 2, <item:tfc:dirt/sandy_loam> * 2]);
-compactor.addRecipe("compacting/cobble/claystone", heated, [<item:tfc:rock/cobble/claystone> * 4], [<item:tfc:dirt/loam>, <item:tfc:dirt/sandy_loam> * 3]);
-compactor.addRecipe("compacting/cobble/conglomerate", heated, [<item:tfc:rock/cobble/conglomerate> * 4], [<item:tfc:dirt/silty_loam> * 4]);
-compactor.addRecipe("compacting/cobble/dacite", heated, [<item:tfc:rock/cobble/dacite> * 4], [<item:tfc:dirt/silty_loam> * 2, <item:tfc:dirt/silt> * 2]);
-compactor.addRecipe("compacting/cobble/diorite", heated, [<item:tfc:rock/cobble/diorite> * 4], [<item:tfc:dirt/silty_loam>, <item:tfc:dirt/silt> * 3]);
-compactor.addRecipe("compacting/cobble/dolomite", heated, [<item:tfc:rock/cobble/dolomite> * 4], [<item:tfc:dirt/loam> * 2, <item:tfc:dirt/silty_loam> * 2]);
-compactor.addRecipe("compacting/cobble/gabbro", heated, [<item:tfc:rock/cobble/gabbro> * 4], [<item:tfc:dirt/silty_loam> * 3, <item:tfc:dirt/silt>]);
-compactor.addRecipe("compacting/cobble/gneiss", heated, [<item:tfc:rock/cobble/gneiss> * 4], [<item:tfc:dirt/silt> * 3, <item:tfc:dirt/sandy_loam>]);
-compactor.addRecipe("compacting/cobble/grabite", heated, [<item:tfc:rock/cobble/granite> * 4], [<item:tfc:dirt/silt> * 4]);
-compactor.addRecipe("compacting/cobble/limestone", heated, [<item:tfc:rock/cobble/limestone> * 4], [<item:tfc:dirt/silty_loam>, <item:tfc:dirt/silt>, <item:tfc:dirt/sandy_loam> * 2]);
-compactor.addRecipe("compacting/cobble/marble", heated, [<item:tfc:rock/cobble/marble> * 4], [<item:tfc:dirt/silty_loam> * 2, <item:tfc:dirt/silt>, <item:tfc:dirt/sandy_loam>]);
-compactor.addRecipe("compacting/cobble/phyllite", heated, [<item:tfc:rock/cobble/phyllite> * 4], [<item:tfc:dirt/silty_loam> * 3, <item:tfc:dirt/sandy_loam>]);
-compactor.addRecipe("compacting/cobble/quartzite", heated, [<item:tfc:rock/cobble/quartzite> * 4], [<item:tfc:dirt/loam>, <item:tfc:dirt/silt>, <item:tfc:dirt/sandy_loam> * 2]);
-compactor.addRecipe("compacting/cobble/rhyolite", heated, [<item:tfc:rock/cobble/rhyolite> * 4], [<item:tfc:dirt/silty_loam> * 2, <item:tfc:dirt/sandy_loam> * 2]);
-compactor.addRecipe("compacting/cobble/schist", heated, [<item:tfc:rock/cobble/schist> * 4], [<item:tfc:dirt/silt>, <item:tfc:dirt/sandy_loam> * 3]);
-compactor.addRecipe("compacting/cobble/shale", heated, [<item:tfc:rock/cobble/shale> * 4], [<item:tfc:dirt/loam>, <item:tfc:dirt/silty_loam> * 2, <item:tfc:dirt/silt>]);
-compactor.addRecipe("compacting/cobble/slate", heated, [<item:tfc:rock/cobble/limestone> * 4], [<item:tfc:dirt/loam>, <item:tfc:dirt/silty_loam>, <item:tfc:dirt/sandy_loam> * 2]);

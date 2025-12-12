@@ -4,8 +4,7 @@
       "tag": "forge:sheets/steel"
     },
     "result": {
-      "item": "kubejs:circular_saw",
-      "count": 2
+      "item": "kubejs:circular_saw"
     },
     "tier": 4,
     "rules": [
