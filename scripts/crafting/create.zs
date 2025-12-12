@@ -33,68 +33,68 @@ craftingTable.addShaped("crafting/curiosities/minecart_coupling", <item:create:m
 ]);
 craftingTable.remove(<item:create:brass_funnel>);
 craftingTable.addShaped("crafting/logistics/brass_funnel", <item:create:brass_funnel> * 2, [
-  [<item:tfc:metal/ingot/brass>]
+  [<item:tfc:metal/ingot/brass>],
   [<item:minecraft:dried_kelp>]
   ]);
 craftingTable.remove(<item:create:brass_tunnel>);
 craftingTable.addShaped("crafting/logistics/brass_tunnel", <item:create:brass_tunnel> * 2, [
-  [<item:tfc:metal/ingot/brass>, <item:tfc:metal/ingot/brass>]
+  [<item:tfc:metal/ingot/brass>, <item:tfc:metal/ingot/brass>],
   [<item:minecraft:dried_kelp>, <item:minecraft:dried_kelp>]
   ]);
 craftingTable.remove(<item:create:display_link>);
 craftingTable.addShaped("crafting/logistics/display_link", <item:create:display_link>, [
-  [<item:tfc:metal/sheet/copper>, <item:create:electron_tube>]
+  [<item:tfc:metal/sheet/copper>, <item:create:electron_tube>],
   [<item:create:brass_casing>, air]
   ]);
 craftingTable.remove(<item:create:powered_latch>);
 craftingTable.addShaped("crafting/logistics/powered_latch", <item:create:powered_latch>, [
-  [air, <item:minecraft:redstone_torch>, air]
-  [<tag:items:forge:dusts/redstone>, <item:minecraft:lever>, <tag:items:forge:dusts/redstone>]
+  [air, <item:minecraft:redstone_torch>, air],
+  [<tag:items:forge:dusts/redstone>, <item:minecraft:lever>, <tag:items:forge:dusts/redstone>],
   [<tag:items:forge:smooth_stone>, <tag:items:forge:smooth_stone>, <tag:items:forge:smooth_stone>]
   ]);
 craftingTable.remove(<item:create:powered_toggle_latch>);
 craftingTable.addShaped("crafting/logistics/powered_toggle_latch", <item:create:powered_toggle_latch>, [
-  [air, <item:minecraft:redstone_torch>, air]
-  [air, <item:minecraft:lever>, air]
+  [air, <item:minecraft:redstone_torch>, air],
+  [air, <item:minecraft:lever>, air],
   [<tag:items:forge:smooth_stone>, <tag:items:forge:smooth_stone>, <tag:items:forge:smooth_stone>]
   ]);
 craftingTable.remove(<item:create:pulse_extender>);
 craftingTable.addShaped("crafting/logistics/pulse_extender", <item:create:pulse_extender>, [
-  [air, air, <item:minecraft:redstone_torch>]
-  [<tag:items:forge:dusts/redstone>, <item:tfc:metal/sheet/brass>, <item:minecraft:redstone_torch>]
+  [air, air, <item:minecraft:redstone_torch>],
+  [<tag:items:forge:dusts/redstone>, <item:tfc:metal/sheet/brass>, <item:minecraft:redstone_torch>],
   [<tag:items:forge:smooth_stone>, <tag:items:forge:smooth_stone>, <tag:items:forge:smooth_stone>]
   ]);
 craftingTable.remove(<item:create:pulse_repeater>);
 craftingTable.addShaped("crafting/logistics/pulse_repeater", <item:create:pulse_repeater>, [
-  [<tag:items:forge:dusts/redstone>, <item:tfc:metal/sheet/brass>, <item:minecraft:redstone_torch>]
+  [<tag:items:forge:dusts/redstone>, <item:tfc:metal/sheet/brass>, <item:minecraft:redstone_torch>],
   [<tag:items:forge:smooth_stone>, <tag:items:forge:smooth_stone>, <tag:items:forge:smooth_stone>]
   ]);
 craftingTable.remove(<item:create:redstone_contact>);
 craftingTable.addShaped("crafting/logistics/redstone_contact", <item:create:redstone_contact> * 2, [
-  [air, <item:tfc:metal/sheet/wrought_iron>, air]
-  [<tag:items:forge:cobblestone>, <tag:items:forge:dusts/redstone>, <tag:items:forge:cobblestone>]
+  [air, <item:tfc:metal/sheet/wrought_iron>, air],
+  [<tag:items:forge:cobblestone>, <tag:items:forge:dusts/redstone>, <tag:items:forge:cobblestone>],
   [<tag:items:forge:cobblestone>, <tag:items:forge:cobblestone>, <tag:items:forge:cobblestone>]
   ]);
 craftingTable.remove(<item:create:redstone_link>);
 craftingTable.addShaped("crafting/logistics/redstone_link", <item:create:redstone_link> * 2, [
-  [<item:minecraft:redstone_torch>]
-  [<item:create:brass_casing>]
+  [<item:minecraft:redstone_torch>],
+  [<item:create:brass_casing>],
   [<item:create:electron_tube>]
   ]);
 craftingTable.remove(<item:create:electron_tube>);
 craftingTable.addShaped("crafting/materials/electron_tube", <item:create:electron_tube>, [
-  [<item:create:polished_rose_quartz>]
+  [<item:create:polished_rose_quartz>],
   [<item:tfc:metal/ingot/steel>]
   ]);
 craftingTable.remove(<item:create:schematic_table>);
 craftingTable.addShaped("crafting/schematics/schematic_table", <item:create:schematic_table>, [
-  [<tag:items:minecraft:wooden_slabs>, <tag:items:minecraft:wooden_slabs>, <tag:items:minecraft:wooden_slabs>]
-  [air, <tag:items:forge:smooth_stone>, air]
+  [<tag:items:minecraft:wooden_slabs>, <tag:items:minecraft:wooden_slabs>, <tag:items:minecraft:wooden_slabs>],
+  [air, <tag:items:forge:smooth_stone>, air],
   [air, <tag:items:forge:smooth_stone>, air]
   ]);
 craftingTable.remove(<item:create:schematicannon>);
 craftingTable.addShaped("crafting/schematics/schematicannon", <item:create:schematicannon>, [
-  [air, <item:tfc:metal/double_sheet/black_steel>, air]
-  [<tag:items:minecraft:logs>, <item:tfc:metal/double_sheet/black_steel>, <tag:items:minecraft:logs>]
+  [air, <item:tfc:metal/double_sheet/black_steel>, air],
+  [<tag:items:minecraft:logs>, <item:tfc:metal/double_sheet/black_steel>, <tag:items:minecraft:logs>],
   [<tag:items:forge:smooth_stone>, <item:minecraft:dispenser>, <tag:items:forge:smooth_stone>]
   ]);
