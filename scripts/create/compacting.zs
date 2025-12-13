@@ -5,6 +5,7 @@ var heated = <constant:create:heat_condition:heated>;
 
 compactor.remove(<item:minecraft:ice>);
 compactor.addRecipe("compacting/ice_pile", noHeat, [<item:tfc:ice_pile>], [<item:minecraft:snow_block> * 9]);
+compactor.addRecipe("compacting/redstone_block", noHeat, [<item:minecraft:redstone_block>], [<item:minecraft:redstone> * 9]);
 
 compactor.addRecipe("compacting/high_carbon_black_steel", heated, [<item:tfc:metal/ingot/high_carbon_black_steel>], [<item:tfc:metal/ingot/weak_steel>, <item:tfc:metal/ingot/pig_iron>, <tag:items:tfc:flux>]);
 compactor.addRecipe("compacting/high_carbon_blue_steel", heated, [<item:tfc:metal/ingot/high_carbon_blue_steel>], [<item:tfc:metal/ingot/weak_blue_steel>, <item:tfc:metal/ingot/black_steel>, <tag:items:tfc:flux>]);

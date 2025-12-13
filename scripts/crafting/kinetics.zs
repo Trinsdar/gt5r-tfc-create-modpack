@@ -55,6 +55,8 @@ craftingTable.addShaped("crafting/kinetics/item_vault", <item:create:item_vault>
   [<item:tfc:metal/sheet/wrought_iron>, <tag:items:forge:chests/wooden>, <item:tfc:metal/sheet/wrought_iron>],
   [air, <item:tfc:metal/sheet/wrought_iron>, air]
   ]);
+craftingTable.remove(<item:create:item_drain>);
+craftingTable.addShaped("crafting/kinetics/item_drain", <item:create:item_drain>, [[<item:kubejs:wrought_iron_chain_mesh>], [<item:create:copper_casing>]]);
 craftingTable.remove(<item:create:mechanical_crafter>);
 craftingTable.addShaped("crafting/kinetics/mechanical_crafter", <item:create:mechanical_crafter> * 2, [
   [<item:create:cogwheel>],
@@ -245,3 +247,11 @@ craftingTable.addShaped("crafting/kinetics/linear_chassis", <item:create:linear_
   [<tag:items:minecraft:logs>, <tag:items:minecraft:logs>, <tag:items:minecraft:logs>],
   [air, <tag:items:forge:ingots/wrought_iron>, air]
   ]);
+craftingTable.remove(<item:create:andesite_funnel>);
+craftingTable.addShaped("crafting/logistics/wrought_iron_funnel", <item:create:andesite_funnel> * 2, [[<tag:items:forge:ingots/wrought_iron>], [<item:minecraft:dried_kelp>]]);
+craftingTable.remove(<item:create:andesite_tunnel>);
+craftingTable.addShaped("crafting/logistics/wrought_iron_tunnel", <item:create:andesite_tunnel> * 2, [
+  [<tag:items:forge:ingots/wrought_iron>, <tag:items:forge:ingots/wrought_iron>], 
+  [<item:minecraft:dried_kelp>, <item:minecraft:dried_kelp>]
+]);
+

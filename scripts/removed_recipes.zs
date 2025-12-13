@@ -44,6 +44,12 @@ craftingTable.removeByName("minecraft:honey_bottle");
 <recipetype:create:milling>.removeByName("create:milling/terracotta");
 <recipetype:create:milling>.removeByName("create:milling/wool");
 <recipetype:create:crushing>.removeByName("create:crushing/wool");
+var pressing = <recipetype:create:pressing>;
+pressing.remove(<item:create:iron_sheet>);
+pressing.remove(<item:create:copper_sheet>);
+pressing.remove(<item:create:brass_sheet>);
+pressing.remove(<item:create:golden_sheet>);
+craftingTable.remove(<item:create:andesite_alloy_block>);
 
 //removed vanilla foods
 craftingTable.removeByName("minecraft:bread");

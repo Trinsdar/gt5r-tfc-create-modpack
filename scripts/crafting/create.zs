@@ -31,6 +31,18 @@ craftingTable.addShaped("crafting/curiosities/minecart_coupling", <item:create:m
   [air, <item:tfc:metal/rod/nickel>, air],
   [<item:tfc:metal/ingot/nickel>, air, air]
 ]);
+craftingTable.remove(<item:create:andesite_scaffolding>);
+craftingTable.addShaped("crafting/wrought_iron_scaffolding", <item:create:andesite_scaffolding> * 16, [
+  [<tag:items:forge:ingots/wrought_iron>, <tag:items:forge:ingots/wrought_iron>, <tag:items:forge:ingots/wrought_iron>],
+  [<tag:items:forge:ingots/wrought_iron>, air, <tag:items:forge:ingots/wrought_iron>],
+  [<tag:items:forge:ingots/wrought_iron>, air, <tag:items:forge:ingots/wrought_iron>]
+]);
+craftingTable.remove(<item:create:andesite_ladder>);
+craftingTable.addShaped("crafting/wrought_iron_ladder", <item:create:andesite_ladder> * 16, [
+  [<tag:items:forge:ingots/wrought_iron>, air, <tag:items:forge:ingots/wrought_iron>],
+  [<tag:items:forge:ingots/wrought_iron>, <tag:items:forge:ingots/wrought_iron>, <tag:items:forge:ingots/wrought_iron>],
+  [<tag:items:forge:ingots/wrought_iron>, air, <tag:items:forge:ingots/wrought_iron>]
+]);
 craftingTable.remove(<item:create:brass_funnel>);
 craftingTable.addShaped("crafting/logistics/brass_funnel", <item:create:brass_funnel> * 2, [
   [<item:tfc:metal/ingot/brass>],
