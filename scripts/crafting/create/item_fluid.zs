@@ -5,6 +5,8 @@ craftingTable.addShaped("crafting/kinetics/fluid_tank", <item:create:fluid_tank>
     [<item:minecraft:glass>],
     [<item:tfc:metal/sheet/copper>]
 ]);
+craftingTable.remove(<item:create:fluid_pipe>);
+craftingTable.addShapeless("crafting/kinetics/fluid_pipe", <item:create:fluid_pipe>, [<item:tfc:metal/rod/copper>]);
 craftingTable.remove(<item:create:fluid_valve>);
 craftingTable.addShapeless("crafting/kinetics/fluid_valve", <item:create:fluid_valve>, [<tag:items:forge:sheets/copper>, <item:create:fluid_pipe>]);
 craftingTable.remove(<item:create:item_vault>);

@@ -4,6 +4,8 @@ craftingTable.addShaped("crafting/kinetics/basin", <item:create:basin>, [
     [<item:tfc:metal/ingot/cast_iron>, air, <item:tfc:metal/ingot/cast_iron>],
     [<item:tfc:metal/ingot/cast_iron>, <item:tfc:metal/ingot/cast_iron>, <item:tfc:metal/ingot/cast_iron>]
 ]);
+craftingTable.remove(<item:create:depot>);
+craftingTable.addShapeless("crafting/kinetics/depot", <item:create:depot>, [<tag:items:forge:ingots/wrought_iron>, <item:create:andesite_casing>]);
 craftingTable.remove(<item:create:deployer>);
 craftingTable.addShaped("crafting/kinetics/deployer", <item:create:deployer>, [
     [<item:create:piston_extension_pole>],

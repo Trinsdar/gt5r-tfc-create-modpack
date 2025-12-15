@@ -78,3 +78,15 @@ craftingTable.addShaped("crafting/materials/electron_tube", <item:create:electro
     [<item:create:polished_rose_quartz>],
     [<item:tfc:metal/ingot/steel>]
 ]);
+craftingTable.remove(<item:create:crafter_slot_cover>);
+craftingTable.addShapeless("crafting/kinetics/crafter_slot_cover", <item:create:crafter_slot_cover> * 4, [<item:tfc:metal/sheet/brass>]);
+craftingTable.remove(<item:create:placard>);
+craftingTable.addShapeless("crafting/kinetics/placard", <item:create:placard> * 2, [<item:minecraft:item_frame>, <item:tfc:metal/rod/cast_iron>, <item:tfc:metal/rod/cast_iron>]);
+craftingTable.remove(<item:create:super_glue>);
+craftingTable.addShapeless("crafting/kinetics/super_glue", <item:create:super_glue>, [<item:tfc:glue>, <item:tfc:glue>, <item:tfc:metal/sheet/tin>]);
+craftingTable.remove(<item:create:train_door>);
+craftingTable.addShapeless("crafting/kinetics/train_door", <item:create:train_door> * 2, [<tag:items:minecraft:wooden_doors>, <item:tfc:metal/ingot/brass>]);
+craftingTable.remove(<item:create:train_trapdoor>);
+craftingTable.addShapeless("crafting/kinetics/train_trapdoor", <item:create:train_trapdoor> * 2, [<tag:items:minecraft:wooden_trapdoors>, <item:tfc:metal/ingot/brass>]);
+craftingTable.remove(<item:create:sand_paper>);
+craftingTable.addShapeless("crafting/materials/sand_paper", <item:create:sand_paper>, [<item:tfc:unrefined_paper>, <tag:items:forge:sand>]);

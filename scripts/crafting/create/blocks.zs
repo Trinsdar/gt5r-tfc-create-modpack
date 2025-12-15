@@ -6,15 +6,15 @@ craftingTable.addShaped("crafting/logistics/display_link", <item:create:display_
 ]);
 craftingTable.remove(<item:create:elevator_pulley>);
 craftingTable.addShaped("crafting/kinetics/elevator_pulley", <item:create:elevator_pulley>, [
-    <item:create:brass_casing>, <item:tfc:jute_fiber>, <item:tfc:brass_mechanisms>],
-    air, <item:tfc:jute_fiber>, air],
-    air, <item:tfc:metal/sheet/steel>, air]
+    [<item:create:brass_casing>, <item:tfc:jute_fiber>, <item:tfc:brass_mechanisms>],
+    [air, <item:tfc:jute_fiber>, air],
+    [air, <item:tfc:metal/sheet/steel>, air]
 ]);
 craftingTable.remove(<item:create:hose_pulley>);
 craftingTable.addShaped("crafting/kinetics/hose_pulley", <item:create:hose_pulley>, [
-    <item:create:copper_casing>, <item:tfc:jute_fiber>, <item:tfc:brass_mechanisms>],
-    air, <item:tfc:jute_fiber>, air],
-    air, <item:minecraft:bucket>, air]
+    [<item:create:copper_casing>, <item:tfc:jute_fiber>, <item:tfc:brass_mechanisms>],
+    [air, <item:tfc:jute_fiber>, air],
+    [air, <item:minecraft:bucket>, air]
 ]);
 craftingTable.remove(<item:create:metal_bracket>);
 craftingTable.addShaped("crafting/kinetics/metal_bracket", <item:create:metal_bracket> * 8, [
