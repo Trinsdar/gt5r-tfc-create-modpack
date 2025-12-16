@@ -1,7 +1,6 @@
 {
     "replace": false,
     "values": [
-      "gravestone:gravestone",
       "create:creative_motor",
       "create:creative_crate",
       "create:schematicannon",

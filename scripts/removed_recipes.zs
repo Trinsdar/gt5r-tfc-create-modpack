@@ -6,7 +6,6 @@ craftingTable.removeByName("minecraft:repeater");
 craftingTable.removeByName("minecraft:slime_block");
 <recipetype:create:crushing>.removeByName("create:crushing/gravel");
 <recipetype:create:splashing>.removeByName("create:splashing/sand");
-craftingTable.removeByName("create:crafting/kinetics/fluid_pipe_vertical");
 <recipetype:create:mixing>.removeByName("create:mixing/chocolate");
 <recipetype:create:mixing>.removeByName("create:mixing/chocolate_melting");
 <recipetype:create:mixing>.removeByName("create:mixing/tea");

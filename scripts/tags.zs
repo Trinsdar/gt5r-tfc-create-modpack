@@ -39,16 +39,20 @@ for block in createBlocks {
 <tag:blocks:create:passive_boiler_heaters>.add(<block:minecraft:lava>);
 var igneousStones = ["andesite", "basalt", "dacite", "diorite", "gabbro", "granite", "rhyolite"];
 for stone in igneousStones {
-    <tag:blocks:minecraft:infiniburn_overworld>.add(<item:tfc:rock/magma/${stone}>);
+    <tag:blocks:minecraft:infiniburn_overworld>.add(<block:tfc:rock/magma/${stone}>);
 }
 var woods = ["acacia", "ash", "aspen", "birch", "blackwood", "chestnut", "douglas_fir", "hickory", "kapok", "maple", "oak", "palm",
     "pine", "rosewood", "sequoia", "spruce", "sycamore", "white_cedar", "willow"];
 for wood in woods {
-    <tag:blocks:minecraft:saplings>.add(<item:tfc:wood/sapling/${wood}>);
+    <tag:blocks:minecraft:saplings>.add(<block:tfc:wood/sapling/${wood}>);
 }
 
 //Fluid Tags
 <tag:fluids:forge:milk>.add(<fluid:firmalife:coconut_milk>);
 <tag:fluids:forge:milk>.add(<fluid:firmalife:goat_milk>);
 <tag:fluids:forge:milk>.add(<fluid:firmalife:yak_milk>);
-<tag:fluids:create:allow>.add(<fluid:tfc:salt_Water>);
+<tag:fluids:create:allow>.add(<fluid:tfc:salt_water>);
+<tag:fluids:tfc:ingredients>.add(<fluid:kubejs:incandescent_oil>);
+<tag:fluids:tfc:usable_in_blue_steel_bucket>.add(<fluid:kubejs:solder>);
+<tag:fluids:tfc:drinkables>.add(<tag:fluids:integration:alcohol_potions>);
+<tag:fluids:tfc:drinkables>.add(<tag:fluids:integration:alcohol_potions_strong>);
