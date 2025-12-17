@@ -7,3 +7,8 @@ craftingTable.addShaped("crafting/iron_flask_upgrade", <item:waterflasks:iron_fl
   var inputFlask = i[0][1];
   return o.withDamage(inputFlask.damage * 4);
 });
+craftingTable.addShaped("crafting/wrought_iron_chain_mesh", <item:kubejs:wrought_iron_chain_mesh>, [
+    [<item:tfc:metal/chain/wrought_iron>, <item:tfc:metal/chain/wrought_iron>],
+    [<item:tfc:metal/chain/wrought_iron>, <item:tfc:metal/chain/wrought_iron>]
+]);
+craftingTable.addShapeless("crafting/sugarcane_strip", <item:kubejs:sugarcane_strip> * 2, [<item:tfc:food/sugarcane>, <tag:items:tfc:knives>.asIIngredient().transformDamage()]);

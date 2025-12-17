@@ -56,8 +56,4 @@ craftingTable.addShaped("crafting/shroomlight", <item:minecraft:shroomlight>, [
 ]);
 craftingTable.addShapeless("crafting/lapis_from_block", <item:tfc:gem/lapis_lazuli> * 9, [<item:minecraft:lapis_block>]);
 craftingTable.remove(<item:kubejs:wrought_iron_chain_mesh>);
-craftingTable.addShaped("crafting/wrought_iron_chain_mesh", <item:kubejs:wrought_iron_chain_mesh>, [
-    [<item:tfc:metal/chain/wrought_iron>, <item:tfc:metal/chain/wrought_iron>],
-    [<item:tfc:metal/chain/wrought_iron>, <item:tfc:metal/chain/wrought_iron>]
-]);
 craftingTable.addShapeless("crafting/book_from_unrefined_paper", <item:minecraft:book>, [<item:tfc:unrefined_paper>, <item:tfc:unrefined_paper>, <item:tfc:unrefined_paper>, <item:minecraft:leather>]);

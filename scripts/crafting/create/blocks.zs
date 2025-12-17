@@ -119,6 +119,9 @@ craftingTable.addShaped("crafting/rose_quartz_tiles", <item:create:rose_quartz_t
     [<item:create:polished_rose_quartz>, <item:create:polished_rose_quartz>],
     [<item:create:polished_rose_quartz>, <item:create:polished_rose_quartz>]
 ]);
+craftingTable.addShaped("crafting/shaft_bronze", <item:create:shaft> * 4, [[<tag:items:forge:ingots/all_bronze>, <tag:items:tfc:chisels>.asIIngredient().transformDamage()], [<tag:items:forge:ingots/all_bronze>, air]]);
+craftingTable.addShaped("crafting/shaft_iron", <item:create:shaft> * 8, [[<tag:items:forge:ingots/wrought_iron>, <tag:items:tfc:chisels>.asIIngredient().transformDamage()], [<tag:items:forge:ingots/wrought_iron>, air]]);
+craftingTable.addShaped("crafting/shaft_steel", <item:create:shaft> * 12, [[<tag:items:forge:ingots/steel>, <tag:items:tfc:chisels>.asIIngredient().transformDamage()], [<tag:items:forge:ingots/steel>, air]]);
 var exposureStates = ["", "waxed_", "exposed_", "waxed_exposed_", "weathered_", "waxed_weathered_", "oxidized_", "waxed_oxidized_"];
 for exposureState in exposureStates {
     var mcCopper = exposureState == "" || exposureState == "waxed_" ? exposureState +  "copper_block" : exposureState + "copper";

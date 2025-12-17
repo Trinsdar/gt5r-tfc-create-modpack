@@ -1,4 +1,5 @@
 import crafttweaker.api.mod.Mod;
+#priority 100
 //Item Tags
 <tag:items:forge:ingots/all_bronze>.add(<tag:items:forge:ingots/bronze>);
 <tag:items:forge:ingots/all_bronze>.add(<tag:items:forge:ingots/bismuth_bronze>);
