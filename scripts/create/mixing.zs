@@ -5,7 +5,7 @@ var heated = <constant:create:heat_condition:heated>;
 var superheated = <constant:create:heat_condition:superheated>;
 
 craftingTable.remove(<item:create:rose_quartz>);
-mixer.addRecipe("mixing/rose_quartz", heated, [<item:create:rose_quartz>, <item:kubejs:crystalisation_catalyst> % 50], [<tag:items:forge:gems/quartz_all>, <item:minecraft:redstone> * 4, <item:kubejs:crystalisation_catalyst>]);
+mixer.addRecipe("mixing/rose_quartz", heated, [<item:create:rose_quartz>], [<tag:items:forge:gems/quartz_all>, <item:minecraft:redstone> * 4]);
 var colors = ["black", "blue", "brown", "cyan", "green", "gray", "light_blue", "light_gray", "lime", "magenta", "orange", "pink", "purple", "red", "white", "yellow"];
 for color in colors {
   mixer.addRecipe("mixing/alabaster_raw/"+ color, noHeat, [<item:tfc:alabaster/raw/${color}>], [<item:tfc:alabaster/raw>], [<fluid:tfc:${color}_dye> * 25], 25);
@@ -51,9 +51,7 @@ mixer.addRecipe("mixing/bituminous_coal", noHeat, [<item:tfc:ore/bituminous_coal
 mixer.addRecipe("mixing/bone_broth", heated, [<item:kubejs:bone_broth>], [<item:minecraft:bone> * 2, <tag:items:tfc:foods/vegetables> * 2], [<fluid:minecraft:water> * 200, <tag:fluids:forge:milk> * 200]);
 mixer.addRecipe("mixing/candle", noHeat, [<item:tfc:candle>], [<tag:items:forge:string>], [<fluid:tfc:tallow> * 40], 10);
 mixer.addRecipe("mixing/compost_enrichment", noHeat, [<item:tfc:compost> * 7, <item:tfc:compost> % 50], [<item:tfc:compost> * 7, <tag:items:integration:tree_saplings> * 4], [<fluid:minecraft:water> * 250]);
-mixer.addRecipe("mixing/crystalisation_catalyst", heated, [<item:kubejs:crystalisation_catalyst> * 2], [<tag:items:forge:crushed_ores/bismuth>, <item:minecraft:redstone> * 2]);
 mixer.addRecipe("mixing/glue", noHeat, [<item:tfc:glue>], [<item:minecraft:bone_meal>], [<fluid:tfc:limewater> * 500], 50);
-mixer.addRecipe("mixing/halite", heated, [<item:tfc:ore/halite>, <item:kubejs:crystalisation_catalyst> % 50], [<item:tfc:powder/salt> * 4, <item:kubejs:crystalisation_catalyst>]);
 mixer.addRecipe("mixing/mortar", noHeat, [<item:tfc:mortar> * 16], [<tag:items:forge:sand>], [<fluid:tfc:limewater> * 100], 10);
 mixer.addRecipe("mixing/peat", noHeat, [<item:tfc:peat> * 8], [<item:tfc:thatch> * 4, <tag:items:tfc:mud> * 8]);
 mixer.addRecipe("mixing/peat_from_leaves", noHeat, [<item:tfc:peat> * 8], [<tag:items:minecraft:leaves> * 8, <tag:items:tfc:mud> * 8]);
