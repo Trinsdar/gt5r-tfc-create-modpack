@@ -37,11 +37,3 @@ deployer.addRecipe("deploying/clay_molding/unfired_crucible", <item:tfc:fire_cla
 deployer.addRecipe("deploying/clay_molding/unfired_fire_brick", <item:tfc:fire_clay>, <item:tfc:ceramic/ingot_mold>, [<item:tfc:ceramic/unfired_fire_brick>], true);
 deployer.addRecipe("deploying/clay_molding/unfired_fire_ingot_mold", <item:tfc:fire_clay_block>, <tag:items:forge:ingots>, [<item:tfc:ceramic/unfired_fire_ingot_mold> * 2], true);
 deployer.addRecipe("deploying/clay_molding/unfired_ingot_mold", <item:minecraft:clay>, <tag:items:forge:ingots>, [<item:tfc:ceramic/unfired_ingot_mold> * 2], true);
-
-var ores = ["hematite", "limonite", "malachite"];
-for ore in ores {
-  deployer.addRecipe("deploying/ore_to_powder/" + ore + "_normal", <item:tfc:ore/normal_${ore}>, <tag:items:tfc:hammers>, [<item:tfc:powder/${ore}> * 5], true);
-  deployer.addRecipe("deploying/ore_to_powder/" + ore + "_poor", <item:tfc:ore/poor_${ore}>, <tag:items:tfc:hammers>, [<item:tfc:powder/${ore}> * 3], true);
-  deployer.addRecipe("deploying/ore_to_powder/" + ore + "_rich", <item:tfc:ore/rich_${ore}>, <tag:items:tfc:hammers>, [<item:tfc:powder/${ore}> * 7], true);
-  deployer.addRecipe("deploying/ore_to_powder/" + ore + "_small", <item:tfc:ore/small_${ore}>, <tag:items:tfc:hammers>, [<item:tfc:powder/${ore}> * 2], true);
-}
